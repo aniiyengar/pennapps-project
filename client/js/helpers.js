@@ -8,3 +8,9 @@ Template.notes.helpers({
 
 
 });
+
+Template.userinfo.helpers({
+	fullName: function() {
+		return Meteor.user().profile.fullName;
+	}
+})

@@ -1,10 +1,15 @@
 <template name="home">
 
-    Home page!
-    <br>
+    <div id="header" class="card">
+    	<div id="header-content">
+    		<p>shute</p>
+    	</div>
+    </div>
+
     {{#if currentUser}}
-        You are logged in!
+        {{> userinfo}}
     {{else}}
         You are not logged in! <a href="{{pathFor 'login' }}">Log in</a>
     {{/if}}
+
 </template>
