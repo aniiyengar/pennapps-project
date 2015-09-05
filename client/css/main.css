@@ -1,0 +1,31 @@
+
+body {
+	font-family: "Lato", sans-serif !important;
+}
+
+.card {
+	width: 100vw;
+	max-width: 100%;
+}
+
+#header {
+	padding: 15px;
+	background-color: #0080ff;
+}
+
+#header-content {
+	width: 1000px;
+	margin: auto;
+}
+
+#header-content p {
+	margin: 0;
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#body-content {
+	margin: 20px auto 40px;
+	width: 1000px;
+}
