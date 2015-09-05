@@ -11,3 +11,4 @@ accounts-ui
 iron:router
 accounts-password
 accounts-google
+service-configuration

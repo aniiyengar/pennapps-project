@@ -3,7 +3,7 @@
     Home page!
     <br>
     {{#if currentUser}}
-        You are logged in!
+        You are logged in! Your name is {{profile.fullName}}
     {{else}}
         You are not logged in! <a href="{{pathFor 'login' }}">Log in</a>
     {{/if}}
