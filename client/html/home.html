@@ -6,10 +6,18 @@
     	</div>
     </div>
 
-    {{#if currentUser}}
-        {{> userinfo}}
-    {{else}}
-        You are not logged in! <a href="{{pathFor 'login' }}">Log in</a>
-    {{/if}}
+    <div id="body" class="card">
+        <div id="body-content">
+            {{#if currentUser}}
+                {{> userinfo}}
+            {{else}}
+                <style>
+                    #body { text-align: center; }
+                </style>
+                <p>You aren't logged in.</p>
+                {{> loginButtons}}
+            {{/if}}
+        </div>
+    </div>
 
 </template>

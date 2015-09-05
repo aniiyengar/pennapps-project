@@ -26,6 +26,97 @@ body {
 }
 
 #body-content {
-	margin: 20px auto 40px;
+	margin: 50px auto 80px;
 	width: 1000px;
+}
+
+#body-content h1 {
+	font-size: 30px;
+	line-height: 39px;
+}
+
+#body-content p {
+	font-size: 20px;
+	line-height: 28px;
+}
+
+#login-form-container {
+	width: 400px;
+	height: 300px;
+	margin: auto;
+	background-color: #ccc;
+	text-align: center;
+	padding: 20px;
+}
+
+#google-submit {
+	width: 100%;
+	height: 40px;
+	background-color: #d34836;
+	border: none;
+	color: white;
+}
+
+#login-form input[type=text], #login-form input[type=password] {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+#login-submit, #signup-submit {
+	width: 175px;
+	height: 40px;
+	float: left;
+	border: 0;
+	background-color: #337ab7;
+	color: white;
+}
+
+#login-submit {
+	margin-right: 10px;
+}
+
+#log {
+	text-align: center;
+}
+
+template[name=home] #login-dropdown-list {
+	list-style-type: none;
+	margin: auto;
+	padding: 20px;
+	width: 200px;
+	text-align: center;
+	font-size: 25px;
+	background-color: #337ab7;
+	border-radius: 5px;
+
+}
+
+template[name=userinfo] #login-dropdown-list {
+	list-style-type: none;
+}
+
+template[name=userinfo] #login-dropdown-list a {
+	color: black;
+}
+
+template[name=home] #login-dropdown-list  a {
+	color: white;
+}
+
+#note-list {
+	width: 100%;
+	height: 600px;
+}
+
+.note-item {
+	width: 100%;
+	height: 40px;
+	border-top: 1px solid gray;
+	padding: 10px;
+}
+
+.note-item:first-child {
+	border: none;
 }
