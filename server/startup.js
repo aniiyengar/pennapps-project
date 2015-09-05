@@ -1,9 +1,6 @@
 /**
  * Created by Ankur on 9/5/2015.
  */
-
-Meteor.absoluteUrl.defaultOptions.rootUrl = 'http://shuteit.co/';
-
 // first, remove configuration entry in case service is already configured
 ServiceConfiguration.configurations.remove({
     service: "google"
@@ -15,6 +12,13 @@ ServiceConfiguration.configurations.insert({
     secret: "Cch_yHdIBO-ACiFTpw5hybN1"
 });
 
+/*Accounts.onCreateUser(function(options, user) {
+    // We still want the default hook's 'profile' behavior.
+    if (options.profile)
+        user.profile = options.profile;
+    user.profile.fullName =
+    return user;
+});*/
 
 Meteor.users.remove({});
 if(Meteor.users.find().count()==0) {
