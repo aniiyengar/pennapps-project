@@ -1,6 +1,9 @@
 /**
  * Created by Ankur on 9/5/2015.
  */
+
+Meteor.absoluteUrl.defaultOptions.rootUrl = 'http://shuteit.co/';
+
 // first, remove configuration entry in case service is already configured
 ServiceConfiguration.configurations.remove({
     service: "google"
