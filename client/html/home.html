@@ -1,0 +1,10 @@
+<template name="home">
+
+    Home page!
+    <br>
+    {{#if currentUser}}
+        You are logged in!
+    {{else}}
+        You are not logged in! <a href="{{pathFor 'login' }}">Log in</a>
+    {{/if}}
+</template>
