@@ -29,7 +29,7 @@ if(Meteor.users.find().count()==0) {
         password: "defaultPass",
         email: "andrewdenison@phila.gov",
         profile: {
-            fullName: "Andrew Denison"
+            name: "Andrew Denison"
         }
     });
 
@@ -37,7 +37,7 @@ if(Meteor.users.find().count()==0) {
         password: "defaultPass",
         email: "debragoldstein@phila.gov",
         profile: {
-            fullName: "Debra Goldstein"
+            name: "Debra Goldstein"
         }
     });
 
@@ -45,7 +45,7 @@ if(Meteor.users.find().count()==0) {
         password: "defaultPass",
         email: "jeffreyhackett@phila.gov",
         profile: {
-            fullName: "Jeffrey Hackett",
+            name: "Jeffrey Hackett",
             children: [cc1]
         }
     });
@@ -54,7 +54,7 @@ if(Meteor.users.find().count()==0) {
         password: "defaultPass",
         email: "nancygoldenberg@phila.gov",
         profile: {
-            fullName: "Nancy Goldenberg",
+            name: "Nancy Goldenberg",
             children: [cc2]
         }
     });
@@ -63,7 +63,7 @@ if(Meteor.users.find().count()==0) {
         password: "defaultPass",
         email: "michaelnutter@phila.gov",
         profile: {
-            fullName: "Michael Nutter",
+            name: "Michael Nutter",
             children: [c1, c2]
         }
     });
