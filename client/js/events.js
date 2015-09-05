@@ -14,5 +14,14 @@ Template.create.events({
             console.log("Invalid email!");
         }
 
+    },
+    "click #approve": function(event) {
+
+    },
+    "click #chuteup": function(event) {
+
+    },
+    "click #reject": function(event) {
+
     }
 });

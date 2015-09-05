@@ -12,3 +12,5 @@ iron:router
 accounts-password
 accounts-google
 service-configuration
+twbs:bootstrap
+ian:accounts-ui-bootstrap-3
