@@ -73,12 +73,5 @@ if(Meteor.users.find().count()==0) {
 
 Notes.remove({});
 if(Notes.find().count()==0) {
-    console.log("Initializing test notes");
-    Notes.insert(
-        {
-            text: "Hello world!",
-            contact: "ankur@420blaze.it",
-            createdAt: new Date()
-        }
-    );
+    //console.log("Initializing test notes");
 }
