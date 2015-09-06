@@ -2,14 +2,15 @@
  * Created by Ankur on 9/5/2015.
  */
 Template.create.events({
-    "click #send": function(event) {
-        console.log(quill.getHTML());
+    "click #problem-submit-button": function(event) {
+        // console.log(quill.getHTML());
 
         var email = $('#email').val();
         if(/\S+@\S+\.\S+/.test(email)) {
             var category = $('#category').val();
             console.log("Adding note to server...");
-            Meteor.call('addNote', quill.getHTML(), email, category);
+            //Meteor.call('addNote', quill.getHTML(), email, category);
+            Meteor.call('addNote', $("#problem-textarea"), email);
         }
         else {
             console.log("Invalid email!");

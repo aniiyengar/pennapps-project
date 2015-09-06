@@ -24,3 +24,4 @@ Template.userinfo.helpers({
 		return Meteor.user().profile.name;
 	}
 });
+
