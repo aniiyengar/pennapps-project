@@ -1,6 +1,11 @@
 /**
  * Created by Ankur on 9/5/2015.
  */
+
+process.env.MAIL_URL="smtp://shuteit.mail%40gmail.com:Chutepenn@smtp.gmail.com:465/";
+
+
+
 // first, remove configuration entry in case service is already configured
 ServiceConfiguration.configurations.remove({
     service: "google"
@@ -29,15 +34,8 @@ if(Meteor.users.find().count()==0) {
         password: "defaultPass",
         email: "andrewdenison@phila.gov",
         profile: {
-            name: "Andrew Denison"
-        }
-    });
-
-    var cc2 = Accounts.createUser({
-        password: "defaultPass",
-        email: "debragoldstein@phila.gov",
-        profile: {
-            name: "Debra Goldstein"
+            name: "Andrew Denison",
+            category: "Parks & Recreation"
         }
     });
 
@@ -46,7 +44,17 @@ if(Meteor.users.find().count()==0) {
         email: "jeffreyhackett@phila.gov",
         profile: {
             name: "Jeffrey Hackett",
-            children: [cc1]
+            children: [cc1],
+            category: "Parks & Recreation"
+        }
+    });
+
+    var cc2 = Accounts.createUser({
+        password: "defaultPass",
+        email: "debragoldstein@phila.gov",
+        profile: {
+            name: "Debra Goldstein",
+            category: "Energy"
         }
     });
 
@@ -55,7 +63,8 @@ if(Meteor.users.find().count()==0) {
         email: "nancygoldenberg@phila.gov",
         profile: {
             name: "Nancy Goldenberg",
-            children: [cc2]
+            children: [cc2],
+            category: "Energy"
         }
     });
 

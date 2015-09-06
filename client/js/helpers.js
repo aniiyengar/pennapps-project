@@ -9,6 +9,24 @@ Template.notes.helpers({
 
 });
 
+Template.home.rendered = function () {
+    Deps.autorun(function () {
+        if(Meteor.user()) {
+            Router.go('notes');
+        }
+    });
+
+
+    setTimeout(function() {
+        var signin = $("#login-dropdown-list .dropdown-toggle");
+        signin.html('Sign in <b class="caret"></b>');
+
+        var signupLink = $("#signup-link");
+        signupLink.remove();
+    }, 500);
+
+};
+
 Template.userinfo.helpers({
 	fullName: function() {
         console.log("profile.name ="+Meteor.user().profile.name);

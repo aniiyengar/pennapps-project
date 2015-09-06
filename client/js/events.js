@@ -18,7 +18,7 @@ Template.create.events({
     "click #approve": function(event) {
 
     },
-    "click #chuteup": function(event) {
+    "click #shute": function(event) {
 
     },
     "click #reject": function(event) {
