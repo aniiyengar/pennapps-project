@@ -1,9 +1,5 @@
 <template name="notes">
-	<div id="note-list">
-		{{#each notes}}
-	        <div class="note-item">
-	        	{{> note}}
-	        </div>
-	    {{/each}}
-	</div>
+	{{#each notes}}
+	    {{> note}}
+	{{/each}}
 </template>

@@ -15,11 +15,23 @@ Template.create.events({
         else {
             console.log("Invalid email!");
         }
-    },
+    }
+});
+
+Template.note.events({
     "click #approve": function(event) {
+        event.preventDefault();
+        console.log("FHSDJFSDF");
+        console.log(event);
+        var id = $(this).data("noteid");
+        console.log(id);
+
+        Meteor.call('approveNote', id, $("#approve-reason").val());
+    },
+    "click #send-up": function(event) {
 
     },
-    "click #shute": function(event) {
+    "click #send-down": function(event) {
 
     },
     "click #reject": function(event) {
