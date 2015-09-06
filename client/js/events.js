@@ -18,26 +18,31 @@ Template.create.events({
     }
 });
 
+
+var lastNoteId, lastNoteEmail;
 Template.note.events({
     "click #approve": function(event) {
-        event.preventDefault();
-        console.log("FHSDJFSDF");
-        console.log(event);
-        var id = $(this).data("noteid");
-        console.log(id);
+        //event.preventDefault();
+        console.log("Clicked Approve");
+        console.log("last noteid: "+lastNoteId);
+        console.log("last noteemail: "+lastNoteEmail);
 
-        var contact = $(this).data("noteemail");
-        console.log(contact);
-
-        Meteor.call('approveNote', id, contact, $("#approve-reason").val());
+        Meteor.call('approveNote', Meteor.user().profile.name, lastNoteId, lastNoteEmail, $("#approve-reason").val());
     },
-    "click #send-up": function(event) {
-
+    "click .approve-pre": function(event) {
+        lastNoteId = event.target.dataset.noteid;
+        lastNoteEmail = event.target.dataset.noteemail;
     },
-    "click #send-down": function(event) {
-
+    "click .send-up": function(event) {
+        lastNoteId = event.target.dataset.noteid;
+        lastNoteEmail = event.target.dataset.noteemail;
     },
-    "click #reject": function(event) {
-
+    "click .send-down": function(event) {
+        lastNoteId = event.target.dataset.noteid;
+        lastNoteEmail = event.target.dataset.noteemail;
+    },
+    "click .reject": function(event) {
+        lastNoteId = event.target.dataset.noteid;
+        lastNoteEmail = event.target.dataset.noteemail;
     }
 });

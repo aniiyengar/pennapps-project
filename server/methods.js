@@ -2,7 +2,7 @@
  * Created by Ankur on 9/5/2015.
  */
 Meteor.methods({
-    approveNote: function(noteId, contact, reason) {
+    approveNote: function(name, noteId, contact, reason) {
 
 
 
@@ -17,7 +17,7 @@ Meteor.methods({
             from: "shuteit.mail@gmail.com",
             to: contact,
             subject: "Your note has successfully made it through",
-            text: "Your note (ID: " + noteId + ") has been acknowledged; your problems have been recognized! <br><br>" + reason
+            text: "Your note (ID: " + noteId + ") has been acknowledged by "+name+". Your problems have been recognized! Their comment: " + reason
         });
         console.log("Email sent!");
     }
