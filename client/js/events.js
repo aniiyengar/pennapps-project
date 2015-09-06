@@ -33,8 +33,12 @@ Template.note.events({
     },
     "click #send-up": function(event) {
 
+        Meteor.call('shuteUp', $(event.target).data("noteid"));
+
     },
     "click #send-down": function(event) {
+
+        Meteor.call('shuteDown', $(event.target).data("noteid"));
 
     },
     "click #reject": function(event) {
