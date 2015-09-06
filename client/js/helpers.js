@@ -3,10 +3,8 @@
  */
 Template.notes.helpers({
     notes: function() {
-        return Notes.find({}, {sort: {createdAt: -1}});
+        return Meteor.user().profile.notes;
     }
-
-
 });
 
 Template.home.rendered = function () {

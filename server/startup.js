@@ -35,7 +35,7 @@ if(Meteor.users.find().count()==0) {
         email: "andrewdenison@phila.gov",
         profile: {
             name: "Andrew Denison",
-            category: "Parks & Recreation"
+            category: "parks"
         }
     });
 
@@ -45,7 +45,7 @@ if(Meteor.users.find().count()==0) {
         profile: {
             name: "Jeffrey Hackett",
             children: [cc1],
-            category: "Parks & Recreation"
+            category: "parks"
         }
     });
 
@@ -54,7 +54,7 @@ if(Meteor.users.find().count()==0) {
         email: "debragoldstein@phila.gov",
         profile: {
             name: "Debra Goldstein",
-            category: "Energy"
+            category: "energy"
         }
     });
 
@@ -64,7 +64,7 @@ if(Meteor.users.find().count()==0) {
         profile: {
             name: "Nancy Goldenberg",
             children: [cc2],
-            category: "Energy"
+            category: "energy"
         }
     });
 

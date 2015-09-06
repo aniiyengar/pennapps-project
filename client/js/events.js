@@ -7,8 +7,9 @@ Template.create.events({
 
         var email = $('#email').val();
         if(/\S+@\S+\.\S+/.test(email)) {
-            console.log("Send 2 server!");
-            Meteor.call('addNote', quill.getHTML(), email);
+            var category = $('#category').val();
+            console.log("Adding note to server...");
+            Meteor.call('addNote', quill.getHTML(), email, category);
         }
         else {
             console.log("Invalid email!");
