@@ -3,7 +3,7 @@
  */
 Template.notes.helpers({
     notes: function() {
-        return Meteor.user().profile.notes;
+        return Notes.find();
     }
 });
 
