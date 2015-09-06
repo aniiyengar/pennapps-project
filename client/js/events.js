@@ -10,7 +10,7 @@ Template.create.events({
             var category = $('#category').val();
             console.log("Adding note to server...");
             //Meteor.call('addNote', quill.getHTML(), email, category);
-            Meteor.call('addNote', $("#problem-textarea"), email);
+            Meteor.call('addNote', $("#problem-textarea").val() , email, category);
         }
         else {
             console.log("Invalid email!");

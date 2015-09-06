@@ -14,7 +14,7 @@ Template.home.rendered = function () {
 
         var signupLink = $("#signup-link");
         signupLink.remove();
-    }, 300);
+    }, 500);
 
 };
 
