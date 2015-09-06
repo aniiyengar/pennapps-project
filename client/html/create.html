@@ -1,5 +1,5 @@
 <template name="create">
-    <link rel="stylesheet" href="//cdn.quilljs.com/0.20.0/quill.snow.css" />
+    <!--<link rel="stylesheet" href="//cdn.quilljs.com/0.20.0/quill.snow.css" />
 
     <div class="quill-wrapper">
         <div id="toolbar" class="toolbar ql-toolbar">
@@ -32,5 +32,12 @@
                 }
             });
         });
-    </script>
+    </script>-->
+
+    <form name="problem">
+        <textarea cols="50" rows="5" id="problem-textarea" placeholder="Describe your problem..."></textarea><br/>
+        <input type="text" id="email" placeholder="Email address" />
+        <input id="problem-submit-button" type="submit" value="Submit" />
+    </form>
+
 </template>
