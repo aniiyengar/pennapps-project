@@ -26,7 +26,10 @@ Template.note.events({
         var id = $(this).data("noteid");
         console.log(id);
 
-        Meteor.call('approveNote', id, $("#approve-reason").val());
+        var contact = $(this).data("noteemail");
+        console.log(contact);
+
+        Meteor.call('approveNote', id, contact, $("#approve-reason").val());
     },
     "click #send-up": function(event) {
 
