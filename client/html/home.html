@@ -1,23 +1,29 @@
 <template name="home">
+    <div id="home">
 
-    <div id="header" class="card">
-    	<div id="header-content">
-    		<p>shute</p>
-    	</div>
-    </div>
-
-    <div id="body" class="card">
-        <div id="body-content">
-            {{#if currentUser}}
-                {{> userinfo}}
-            {{else}}
-                <style>
-                    #body { text-align: center; }
-                </style>
-                <p>You aren't logged in.</p>
-                {{> loginButtons}}
-            {{/if}}
+        <div id="header" class="card">
+        	<div id="header-content">
+                <div id="shute-logo">
+                    <p>shute</p>
+                </div>
+                <div id="login-buttons">
+                    {{> loginButtons}}
+                </div>
+        	</div>
         </div>
+
+        <div id="body" class="card">
+            <div id="body-content">
+                {{#if currentUser}}
+                    {{> userinfo}}
+                {{else}}
+                    <style>
+                        #body { text-align: center; }
+                    </style>
+                {{/if}}
+            </div>
+        </div>
+
     </div>
 
 </template>
