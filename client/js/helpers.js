@@ -20,7 +20,6 @@ Template.home.rendered = function () {
 
 Template.userinfo.helpers({
 	fullName: function() {
-        console.log("profile.name ="+Meteor.user().profile.name);
 		return Meteor.user().profile.name;
 	}
 });

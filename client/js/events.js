@@ -3,7 +3,7 @@
  */
 Template.create.events({
     "click #problem-submit-button": function(event) {
-        // console.log(quill.getHTML());
+        event.preventDefault();
 
         var email = $('#email').val();
         if(/\S+@\S+\.\S+/.test(email)) {
@@ -15,7 +15,6 @@ Template.create.events({
         else {
             console.log("Invalid email!");
         }
-
     },
     "click #approve": function(event) {
 
