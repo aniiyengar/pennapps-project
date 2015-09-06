@@ -52,7 +52,7 @@
             <option value="transport">Transportation</option>
         </select>
         <br/>
-        <input id="problem-submit-button" type="submit" value="Submit" data-toggle="modal" data-target="#confirm-modal" class="btn btn-primary"/>
+        <input id="problem-submit-button" type="submit" value="Submit" data-toggle="modal" data-target="#confirm-modal" onclick="$('#problem-textarea,#email').val('');" class="btn btn-primary"/>
     </form>
 
     <div id="confirm-modal" class="modal fade">
