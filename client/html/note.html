@@ -1,13 +1,35 @@
 <template name="note">
-    <div>
-        {{{text}}}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">By {{contact}} at {{createdAt}}</h3>
+        </div>
+        <div class="panel-body">
+            {{{text}}}<br/>
+            <input type="submit" data-noteid="{{_id}}" data-toggle="modal" data-target="#approve-modal" id="approve-pre" value="Approve" />
+            <input type="submit" data-noteid="{{_id}}" id="send-up" value="Send Up" />
+            <input type="submit" data-noteid="{{_id}}" id="send-down" value="Send Down" />
+            <input type="submit" data-noteid="{{_id}}" id="reject" value="Reject" />
+        </div>
     </div>
-    <hr>
-    createdAt: {{createdAt}}<br>
-    contact: {{contact}}
-    <hr>
-    <button id="approve">Approve</button>
-    <button id="shute">Chute up</button>
-    <button id="reject">Reject</button>
-    <br><br><br>
+
+    <div id="approve-modal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Enter Reason for Approval</h4>
+          </div>
+          <div class="modal-body">
+            <input type="text" name="approve-reason" id="approve-reason" />
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="cancel-approve" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" id="approve" data-dismiss="modal" class="btn btn-primary">Approve</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+    <script>
+    </script>
 </template>
